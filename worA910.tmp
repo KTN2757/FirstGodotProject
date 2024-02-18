@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp0jtgwo3dkpt"]
+
+[ext_resource type="Script" path="res://Assets/Player/Player.gd" id="1_q3mts"]
+[ext_resource type="Texture2D" uid="uid://bm8b283pfw664" path="res://Assets/Player/Player.png" id="1_u5j12"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(162, 82)
+script = ExtResource("1_q3mts")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_u5j12")
+hframes = 60

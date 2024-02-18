@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp0jtgwo3dkpt"]
+
+[ext_resource type="Script" path="res://Assets/Player/Player.gd" id="1_q3mts"]
+[ext_resource type="Texture2D" uid="uid://bm8b283pfw664" path="res://Assets/Player/Player.png" id="1_u5j12"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e7qos"]
+radius = 4.0
+height = 12.0
+
+[node name="World" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(160, 80)
+script = ExtResource("1_q3mts")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_u5j12")
+hframes = 60
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 9)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_e7qos")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, 0, 6.66976, 10.0046, 16, 24, 0, 80, 16, 104, 16, 120, 8, 144, 24, 176, 80, 160, 128, 176, 192, 160, 256, 168, 288, 144, 312, 136, 288, 104, 304, 48, 272, 8, 224, 16, 168, 8, 80, 16, 0, 0, 320, 0, 320, 176, 0, 184)
