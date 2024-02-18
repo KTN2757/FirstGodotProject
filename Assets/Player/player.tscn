@@ -12,10 +12,10 @@ script = ExtResource("1_krsto")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -9)
 texture = ExtResource("2_7lpp1")
 hframes = 60
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 9)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_e7qos")
